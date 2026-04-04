@@ -1,0 +1,1429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Body by Olesya. London's Top Female Personal Trainer | Kensington & Chelsea</title>
+<meta name="description" content="London's top female personal trainer in Kensington & Chelsea. Bespoke fat loss, toning and strength training for women. 20+ years experience at KX Gym, Equinox & UP Mayfair. Book your free consultation today.">
+<meta name="keywords" content="personal trainer London, female personal trainer Kensington, personal trainer Chelsea, fat loss London, weight loss personal trainer, women's fitness London, personal trainer Knightsbridge, body transformation London">
+<meta property="og:title" content="Body by Olesya. London's Top Female Personal Trainer">
+<meta property="og:description" content="Bespoke personal training for women in Kensington & Chelsea. Fat loss, toning and strength built around your life. 20+ years experience. Book your free consultation.">
+<meta property="og:url" content="https://bodybyolesya.com">
+<meta name="robots" content="index, follow">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --cream: #F9F6F1;
+  --warm: #F4EEE6;
+  --blush: #DBBFA8;
+  --rose: #B87355;
+  --rose-dark: #9A5E42;
+  --charcoal: #1E1E1C;
+  --dark: #2A2825;
+  --mid: #6A6560;
+  --light: #9C9490;
+  --border: #E5DDD4;
+  --white: #FFFFFF;
+}
+
+html { scroll-behavior: smooth; }
+body { font-family: 'Jost', sans-serif; background: var(--cream); color: var(--charcoal); overflow-x: hidden; }
+
+/* PAGE TOGGLE */
+.page { display: none; }
+.page.active { display: block; }
+
+/* NAV */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 200;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 20px 60px;
+  background: rgba(249,246,241,0.95);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border);
+  transition: padding 0.3s, box-shadow 0.3s;
+}
+nav.scrolled { padding: 14px 60px; box-shadow: 0 2px 20px rgba(0,0,0,0.06); }
+.nav-logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.3rem; font-weight: 400; letter-spacing: 0.04em;
+  color: var(--charcoal); text-decoration: none; cursor: pointer;
+}
+.nav-logo em { font-style: italic; color: var(--rose); }
+.nav-links { display: flex; gap: 32px; list-style: none; }
+.nav-links a, .nav-links button {
+  font-size: 0.75rem; letter-spacing: 0.13em; text-transform: uppercase;
+  color: var(--mid); text-decoration: none; font-weight: 500;
+  background: none; border: none; cursor: pointer; font-family: 'Jost', sans-serif;
+  transition: color 0.2s;
+}
+.nav-links a:hover, .nav-links button:hover { color: var(--rose); }
+.nav-links button.active-nav { color: var(--rose); }
+.nav-cta {
+  background: var(--rose); color: white;
+  padding: 11px 24px; border-radius: 2px;
+  font-size: 0.73rem; letter-spacing: 0.13em; text-transform: uppercase;
+  font-weight: 600; text-decoration: none; cursor: pointer;
+  border: none; font-family: 'Jost', sans-serif;
+  transition: background 0.2s, transform 0.15s;
+}
+.nav-cta:hover { background: var(--rose-dark); transform: translateY(-1px); }
+
+/* SHARED UTILITIES */
+.section-label {
+  font-size: 0.68rem; letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--rose); font-weight: 600;
+  display: flex; align-items: center; gap: 12px; margin-bottom: 14px;
+}
+.section-label::before { content: ''; width: 30px; height: 1px; background: var(--rose); }
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2rem, 3.5vw, 3.2rem); font-weight: 400; line-height: 1.15;
+  color: var(--charcoal);
+}
+.section-title em { font-style: italic; color: var(--rose); }
+.btn-primary {
+  display: inline-block; background: var(--charcoal); color: white;
+  padding: 15px 34px; border-radius: 2px;
+  font-size: 0.73rem; letter-spacing: 0.15em; text-transform: uppercase;
+  font-weight: 600; text-decoration: none; cursor: pointer; border: none;
+  font-family: 'Jost', sans-serif; transition: background 0.2s, transform 0.15s;
+}
+.btn-primary:hover { background: var(--rose-dark); transform: translateY(-1px); }
+.btn-outline {
+  display: inline-block; background: transparent; color: var(--charcoal);
+  padding: 14px 32px; border-radius: 2px; border: 1.5px solid var(--charcoal);
+  font-size: 0.73rem; letter-spacing: 0.15em; text-transform: uppercase;
+  font-weight: 600; text-decoration: none; cursor: pointer;
+  font-family: 'Jost', sans-serif; transition: all 0.2s;
+}
+.btn-outline:hover { background: var(--charcoal); color: white; }
+.btn-rose {
+  display: inline-block; background: var(--rose); color: white;
+  padding: 15px 34px; border-radius: 2px;
+  font-size: 0.73rem; letter-spacing: 0.15em; text-transform: uppercase;
+  font-weight: 600; text-decoration: none; cursor: pointer; border: none;
+  font-family: 'Jost', sans-serif; transition: background 0.2s, transform 0.15s;
+}
+.btn-rose:hover { background: var(--rose-dark); transform: translateY(-1px); }
+
+/* HERO */
+.hero {
+  min-height: 100vh; position: relative;
+  display: grid; grid-template-columns: 1fr 1fr;
+  padding-top: 80px; overflow: hidden;
+}
+.hero-left {
+  background: var(--charcoal); position: relative;
+  display: flex; flex-direction: column; justify-content: center;
+  padding: 80px 64px 80px 80px; z-index: 1;
+}
+.hero-left::after {
+  content: ''; position: absolute; top: 0; right: -60px; bottom: 0; width: 120px;
+  background: var(--charcoal);
+  clip-path: polygon(0 0, 0% 100%, 100% 100%);
+  z-index: 2;
+}
+.hero-eyebrow {
+  font-size: 0.68rem; letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--blush); font-weight: 500; margin-bottom: 24px;
+  display: flex; align-items: center; gap: 12px;
+  opacity: 0; animation: fadeUp 0.6s 0.1s ease forwards;
+}
+.hero-eyebrow::before { content: ''; width: 28px; height: 1px; background: var(--rose); }
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.6rem, 4vw, 3.8rem); font-weight: 400;
+  line-height: 1.1; color: white; margin-bottom: 28px;
+  opacity: 0; animation: fadeUp 0.6s 0.2s ease forwards;
+}
+.hero h1 em { font-style: italic; color: var(--blush); }
+.hero-sub {
+  font-size: 0.95rem; line-height: 1.8; color: rgba(255,255,255,0.6);
+  font-weight: 300; max-width: 400px; margin-bottom: 44px;
+  opacity: 0; animation: fadeUp 0.6s 0.3s ease forwards;
+}
+.hero-actions {
+  display: flex; gap: 14px; flex-wrap: wrap;
+  opacity: 0; animation: fadeUp 0.6s 0.4s ease forwards;
+}
+.hero-actions .btn-rose { background: var(--rose); }
+.hero-actions .btn-outline { border-color: rgba(255,255,255,0.3); color: white; }
+.hero-actions .btn-outline:hover { background: rgba(255,255,255,0.1); border-color: white; }
+.hero-stats {
+  display: flex; gap: 36px; margin-top: 56px;
+  padding-top: 36px; border-top: 1px solid rgba(255,255,255,0.12);
+  opacity: 0; animation: fadeUp 0.6s 0.5s ease forwards;
+}
+.stat-num {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.2rem; font-weight: 400; color: white; line-height: 1;
+}
+.stat-label { font-size: 0.68rem; color: rgba(255,255,255,0.4); text-transform: uppercase; letter-spacing: 0.1em; margin-top: 5px; }
+.hero-right { position: relative; overflow: hidden; background: #2A2825; }
+.hero-result-card {
+  position: absolute; bottom: 40px; left: 20px;
+  background: white; padding: 20px 24px; border-radius: 4px;
+  box-shadow: 0 12px 48px rgba(0,0,0,0.2); z-index: 10;
+  min-width: 200px;
+  animation: floatCard 3s ease-in-out infinite;
+}
+@keyframes floatCard {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+.result-card-label { font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--light); }
+.result-card-val { font-family: 'Playfair Display', serif; font-size: 1.5rem; color: var(--charcoal); margin: 2px 0; }
+.result-card-sub { font-size: 0.72rem; color: var(--rose); font-weight: 500; }
+
+/* TRUST BAR */
+.trust-bar {
+  background: var(--rose); padding: 18px 60px;
+  display: flex; align-items: center; justify-content: center; gap: 48px; flex-wrap: wrap;
+}
+.trust-item {
+  font-size: 0.68rem; letter-spacing: 0.16em; text-transform: uppercase;
+  color: rgba(255,255,255,0.85); font-weight: 500;
+  display: flex; align-items: center; gap: 10px;
+}
+.trust-item::before { content: '✦'; font-size: 0.5rem; }
+
+/* RESULTS STRIP */
+.results-strip { background: var(--warm); padding: 80px 60px; }
+.results-strip-header {
+  display: flex; align-items: flex-end; justify-content: space-between;
+  margin-bottom: 48px; flex-wrap: wrap; gap: 20px;
+}
+.results-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+.result-pair { display: flex; flex-direction: column; gap: 8px; }
+.result-img {
+  aspect-ratio: 1/1; position: relative; overflow: hidden;
+  cursor: pointer; transition: opacity 0.2s; border-radius: 2px;
+}
+.result-img:hover { opacity: 0.9; }
+.result-caption {
+  background: var(--charcoal); color: rgba(255,255,255,0.7);
+  font-size: 0.68rem; text-align: center; padding: 8px 4px;
+  letter-spacing: 0.08em;
+}
+
+/* ABOUT */
+.about { display: grid; grid-template-columns: 1fr 1fr; background: var(--white); }
+.about-photo {
+  background: linear-gradient(160deg, #D4B8A6 0%, #B89080 100%);
+  min-height: 600px; position: relative;
+  display: flex; align-items: center; justify-content: center;
+}
+.about-cred {
+  position: absolute; bottom: 32px; left: 32px; right: 32px;
+  background: white; padding: 20px 24px; border-radius: 3px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+}
+.about-cred-title { font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.14em; color: var(--light); margin-bottom: 8px; }
+.about-cred-items { display: flex; gap: 6px; flex-wrap: wrap; }
+.cred-pill {
+  background: var(--warm); padding: 4px 10px; border-radius: 20px;
+  font-size: 0.68rem; color: var(--mid); font-weight: 500;
+}
+.about-content {
+  padding: 80px 72px 80px 64px;
+  display: flex; flex-direction: column; justify-content: center;
+}
+.about-content p {
+  font-size: 0.95rem; line-height: 1.85; color: var(--mid);
+  font-weight: 300; margin-bottom: 20px;
+}
+.about-content p strong { color: var(--charcoal); font-weight: 600; }
+.about-actions { display: flex; gap: 14px; margin-top: 12px; flex-wrap: wrap; }
+
+/* SERVICES */
+.services { padding: 100px 60px; background: var(--cream); }
+.services-header { margin-bottom: 56px; }
+.services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; }
+.service-card {
+  background: var(--white); padding: 44px 36px;
+  border-top: 3px solid transparent;
+  transition: border-color 0.3s, transform 0.2s, box-shadow 0.2s;
+}
+.service-card:hover {
+  border-color: var(--rose); transform: translateY(-3px);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.08);
+}
+.service-num {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.8rem; font-weight: 400; color: var(--border); line-height: 1; margin-bottom: 18px;
+}
+.service-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.3rem; font-weight: 400; color: var(--charcoal); margin-bottom: 14px;
+}
+.service-desc { font-size: 0.86rem; line-height: 1.8; color: var(--mid); font-weight: 300; }
+
+/* SOCIAL PROOF */
+.social-proof { background: var(--charcoal); padding: 80px 60px; }
+.social-proof .section-label { color: var(--blush); }
+.social-proof .section-label::before { background: var(--blush); }
+.social-proof .section-title { color: white; margin-bottom: 48px; }
+.reviews-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.review-card {
+  background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.07);
+  padding: 36px 32px; border-radius: 2px; transition: background 0.3s;
+}
+.review-card:hover { background: rgba(255,255,255,0.08); }
+.review-stars { color: var(--rose); font-size: 0.85rem; margin-bottom: 18px; }
+.review-text {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.05rem; font-style: italic; font-weight: 400;
+  color: rgba(255,255,255,0.82); line-height: 1.65; margin-bottom: 24px;
+}
+.review-name { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.12em; color: rgba(255,255,255,0.35); }
+.review-name strong { color: var(--rose); display: block; margin-bottom: 3px; }
+.google-badge {
+  display: flex; align-items: center; gap: 10px; margin-top: 40px;
+  background: rgba(255,255,255,0.05); padding: 16px 20px; border-radius: 2px;
+  width: fit-content;
+}
+.google-badge-text { font-size: 0.78rem; color: rgba(255,255,255,0.5); }
+.google-badge-rating { font-family: 'Playfair Display', serif; font-size: 1.6rem; color: white; line-height: 1; }
+.google-badge-stars { color: #FFC107; font-size: 0.8rem; }
+
+/* HOW IT WORKS */
+.how { padding: 100px 60px; background: var(--warm); }
+.steps-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px; margin-top: 56px; }
+.step-card {
+  background: var(--white); padding: 40px 32px; text-align: center; position: relative;
+}
+.step-card:not(:last-child)::after {
+  content: '→'; position: absolute; right: -14px; top: 50%;
+  transform: translateY(-50%); color: var(--rose); font-size: 1.1rem; z-index: 2;
+}
+.step-circle {
+  width: 52px; height: 52px; border-radius: 50%;
+  background: var(--rose); color: white; margin: 0 auto 22px;
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Playfair Display', serif; font-size: 1.4rem;
+}
+.step-title { font-family: 'Playfair Display', serif; font-size: 1.15rem; color: var(--charcoal); margin-bottom: 12px; }
+.step-desc { font-size: 0.82rem; line-height: 1.75; color: var(--mid); font-weight: 300; }
+
+/* CTA BANNER */
+.cta-banner {
+  background: var(--rose); padding: 80px 60px;
+  display: grid; grid-template-columns: 1fr auto; gap: 40px; align-items: center;
+}
+.cta-banner-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.8rem, 3vw, 2.8rem); font-weight: 400; color: white; line-height: 1.2;
+  margin-bottom: 10px;
+}
+.cta-banner-title em { font-style: italic; }
+.cta-banner-sub { font-size: 0.9rem; color: rgba(255,255,255,0.75); font-weight: 300; }
+.cta-banner .btn-primary { background: var(--charcoal); white-space: nowrap; }
+
+/* CONSULT FORM */
+.consult { padding: 100px 60px; background: var(--cream); }
+.consult-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
+.consult-left p { font-size: 0.95rem; line-height: 1.8; color: var(--mid); font-weight: 300; margin-top: 20px; max-width: 400px; }
+.consult-promise { margin-top: 40px; display: flex; flex-direction: column; gap: 12px; }
+.promise-item { display: flex; align-items: flex-start; gap: 14px; }
+.promise-icon { color: var(--rose); font-size: 1rem; flex-shrink: 0; margin-top: 1px; }
+.promise-text { font-size: 0.85rem; color: var(--mid); font-weight: 300; line-height: 1.5; }
+.consult-form-box {
+  background: var(--white); padding: 48px 44px; border-radius: 3px;
+  box-shadow: 0 16px 60px rgba(0,0,0,0.08);
+}
+.form-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.7rem; font-weight: 400; color: var(--charcoal); margin-bottom: 6px;
+}
+.form-sub { font-size: 0.82rem; color: var(--light); margin-bottom: 32px; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.form-group { margin-bottom: 14px; }
+.form-group label {
+  display: block; font-size: 0.68rem; letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--mid); margin-bottom: 7px; font-weight: 600;
+}
+.form-group input, .form-group select, .form-group textarea {
+  width: 100%; padding: 13px 15px;
+  border: 1px solid var(--border); border-radius: 2px;
+  font-family: 'Jost', sans-serif; font-size: 0.88rem;
+  color: var(--charcoal); background: var(--cream); outline: none;
+  transition: border-color 0.2s, background 0.2s; appearance: none;
+}
+.form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+  border-color: var(--rose); background: var(--white);
+}
+.form-group textarea { resize: vertical; min-height: 90px; }
+.form-submit {
+  width: 100%; padding: 16px;
+  background: var(--charcoal); color: white; border: none; border-radius: 2px;
+  font-family: 'Jost', sans-serif;
+  font-size: 0.73rem; letter-spacing: 0.16em; text-transform: uppercase;
+  font-weight: 600; cursor: pointer; margin-top: 6px;
+  transition: background 0.2s, transform 0.15s;
+}
+.form-submit:hover { background: var(--rose-dark); transform: translateY(-1px); }
+.form-note { font-size: 0.68rem; color: var(--light); text-align: center; margin-top: 12px; }
+
+/* FAQ */
+.faq { padding: 100px 60px; background: var(--white); }
+.faq-inner { display: grid; grid-template-columns: 1fr 1.6fr; gap: 80px; }
+.faq-list { margin-top: 40px; }
+.faq-item { border-bottom: 1px solid var(--border); }
+.faq-btn {
+  width: 100%; padding: 22px 0; display: flex; justify-content: space-between;
+  align-items: center; gap: 16px; background: none; border: none;
+  cursor: pointer; font-family: 'Jost', sans-serif; text-align: left;
+}
+.faq-q { font-size: 0.9rem; font-weight: 500; color: var(--charcoal); }
+.faq-icon { color: var(--rose); font-size: 1.3rem; flex-shrink: 0; transition: transform 0.3s; font-weight: 300; }
+.faq-item.open .faq-icon { transform: rotate(45deg); }
+.faq-a {
+  font-size: 0.86rem; line-height: 1.8; color: var(--mid); font-weight: 300;
+  padding-bottom: 20px; display: none;
+}
+.faq-item.open .faq-a { display: block; }
+
+/* FOOTER */
+footer { background: var(--charcoal); padding: 72px 60px 40px; }
+.footer-top { display: grid; grid-template-columns: 1.8fr 1fr 1fr 1fr; gap: 60px; margin-bottom: 60px; }
+.footer-logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.3rem; color: white; margin-bottom: 16px; display: block; cursor: pointer;
+}
+.footer-logo em { font-style: italic; color: var(--blush); }
+.footer-desc { font-size: 0.82rem; color: rgba(255,255,255,0.35); line-height: 1.75; font-weight: 300; }
+.footer-col h4 {
+  font-size: 0.65rem; letter-spacing: 0.18em; text-transform: uppercase;
+  color: rgba(255,255,255,0.25); margin-bottom: 20px; font-weight: 600;
+}
+.footer-col a {
+  display: block; font-size: 0.82rem; color: rgba(255,255,255,0.5);
+  text-decoration: none; margin-bottom: 10px; transition: color 0.2s; cursor: pointer;
+}
+.footer-col a:hover { color: var(--blush); }
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.07); padding-top: 28px;
+  display: flex; justify-content: space-between; align-items: center;
+}
+.footer-bottom p { font-size: 0.7rem; color: rgba(255,255,255,0.2); }
+
+/* PACKAGES PAGE */
+.pkg-hero { padding: 140px 60px 80px; background: var(--charcoal); text-align: center; }
+.pkg-hero .section-label { justify-content: center; }
+.pkg-hero .section-label::before { display: none; }
+.pkg-hero .section-title { color: white; margin-bottom: 16px; }
+.pkg-hero-sub { font-size: 1rem; color: rgba(255,255,255,0.5); font-weight: 300; max-width: 540px; margin: 0 auto; }
+
+.pkg-main { padding: 80px 60px; background: var(--cream); }
+.pkg-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 56px; }
+.pkg-card {
+  background: var(--white); border-radius: 3px; overflow: hidden; position: relative;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+  transition: transform 0.25s, box-shadow 0.25s;
+  display: flex; flex-direction: column;
+}
+.pkg-card:hover { transform: translateY(-6px); box-shadow: 0 16px 56px rgba(0,0,0,0.12); }
+.pkg-card.featured { border: 2px solid var(--rose); }
+.pkg-featured-tag {
+  position: absolute; top: 0; right: 0;
+  background: var(--rose); color: white;
+  font-size: 0.62rem; letter-spacing: 0.14em; text-transform: uppercase;
+  font-weight: 700; padding: 5px 14px;
+}
+.pkg-card-img {
+  width: 100%; aspect-ratio: 16/9; object-fit: cover;
+  background: linear-gradient(135deg, #D4B8A6, #B89080);
+  display: flex; align-items: center; justify-content: center;
+}
+.pkg-body { padding: 32px 28px; flex: 1; display: flex; flex-direction: column; }
+.pkg-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4rem; font-weight: 400; color: var(--charcoal); margin-bottom: 6px;
+}
+.pkg-tagline { font-size: 0.8rem; color: var(--rose); font-weight: 500; margin-bottom: 20px; }
+.pkg-desc { font-size: 0.84rem; line-height: 1.75; color: var(--mid); font-weight: 300; margin-bottom: 24px; }
+.pkg-details { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 24px; }
+.pkg-detail-pill {
+  background: var(--warm); padding: 5px 12px; border-radius: 20px;
+  font-size: 0.68rem; color: var(--mid); letter-spacing: 0.06em;
+}
+.pkg-price-row { display: flex; align-items: baseline; gap: 6px; margin-bottom: 8px; }
+.pkg-price { font-family: 'Playfair Display', serif; font-size: 2.2rem; font-weight: 400; color: var(--charcoal); }
+.pkg-price-sub { font-size: 0.75rem; color: var(--light); }
+.pkg-features { list-style: none; margin-bottom: 28px; }
+.pkg-features li {
+  font-size: 0.82rem; color: var(--mid); padding: 7px 0;
+  border-bottom: 1px solid var(--border); display: flex; align-items: flex-start; gap: 10px;
+  font-weight: 300; line-height: 1.5;
+}
+.pkg-features li::before { content: '✓'; color: var(--rose); font-size: 0.8rem; flex-shrink: 0; margin-top: 1px; }
+.pkg-cta { margin-top: auto; }
+
+/* WHAT'S INCLUDED */
+.whats-included { padding: 80px 60px; background: var(--white); }
+.included-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2px; margin-top: 48px; }
+.included-item {
+  padding: 32px 36px; background: var(--cream);
+  display: flex; gap: 20px; align-items: flex-start; transition: background 0.2s;
+}
+.included-item:hover { background: var(--warm); }
+.included-icon { font-size: 1.4rem; flex-shrink: 0; }
+.included-title { font-size: 0.9rem; font-weight: 600; color: var(--charcoal); margin-bottom: 6px; }
+.included-desc { font-size: 0.82rem; line-height: 1.65; color: var(--mid); font-weight: 300; }
+
+/* COMPARE TABLE */
+.compare { padding: 80px 60px; background: var(--cream); }
+.compare-table { width: 100%; border-collapse: collapse; margin-top: 48px; font-size: 0.84rem; }
+.compare-table th {
+  padding: 18px 20px; text-align: center; font-weight: 600;
+  font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase;
+  border-bottom: 2px solid var(--border); background: var(--white);
+}
+.compare-table th:first-child { text-align: left; }
+.compare-table th.featured-col { background: var(--rose); color: white; }
+.compare-table td {
+  padding: 14px 20px; text-align: center;
+  border-bottom: 1px solid var(--border); color: var(--mid); background: var(--white);
+}
+.compare-table td:first-child { text-align: left; color: var(--charcoal); font-weight: 500; }
+.compare-table td.featured-col { background: rgba(184,115,85,0.06); }
+.compare-table tr:hover td { background: var(--warm); }
+.compare-table tr:hover td.featured-col { background: rgba(184,115,85,0.1); }
+.check { color: var(--rose); font-size: 1rem; }
+.cross { color: var(--border); font-size: 0.9rem; }
+
+/* PKG FAQ */
+.pkg-faq { padding: 80px 60px; background: var(--white); }
+.pkg-faq-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 0 80px; margin-top: 48px; }
+
+/* PKG CTA */
+.pkg-cta-section {
+  padding: 100px 60px; text-align: center;
+  background: linear-gradient(135deg, #D4B8A6 0%, #B89080 60%, #A07060 100%);
+}
+.pkg-cta-section .section-title { margin-bottom: 16px; }
+.pkg-cta-section p { font-size: 0.95rem; color: rgba(255,255,255,0.8); margin-bottom: 40px; font-weight: 300; }
+.pkg-cta-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+
+/* ANIMATIONS */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* MOBILE */
+@media (max-width: 960px) {
+  nav { padding: 16px 24px; }
+  .nav-links { display: none; }
+  .hero { grid-template-columns: 1fr; min-height: auto; }
+  .hero-left { padding: 60px 24px; }
+  .hero-left::after { display: none; }
+  .hero-right { height: 280px; }
+  .hero-result-card { display: none; }
+  .trust-bar { padding: 18px 24px; gap: 20px; }
+  .results-strip { padding: 60px 24px; }
+  .results-strip-header { flex-direction: column; align-items: flex-start; }
+  .results-grid { grid-template-columns: repeat(2, 1fr); gap: 8px; }
+  .result-pair { gap: 6px; }
+  .about { grid-template-columns: 1fr; }
+  .about-photo { min-height: 320px; }
+  .about-content { padding: 48px 24px; }
+  .services { padding: 60px 24px; }
+  .services-grid { grid-template-columns: 1fr; gap: 2px; }
+  .social-proof { padding: 60px 24px; }
+  .reviews-row { grid-template-columns: 1fr; }
+  .how { padding: 60px 24px; }
+  .steps-row { grid-template-columns: 1fr 1fr; }
+  .step-card:nth-child(2)::after, .step-card:nth-child(4)::after { display: none; }
+  .cta-banner { grid-template-columns: 1fr; padding: 60px 24px; }
+  .consult { padding: 60px 24px; }
+  .consult-inner { grid-template-columns: 1fr; gap: 40px; }
+  .faq { padding: 60px 24px; }
+  .faq-inner { grid-template-columns: 1fr; gap: 40px; }
+  footer { padding: 48px 24px 32px; }
+  .footer-top { grid-template-columns: 1fr 1fr; gap: 40px; }
+  .pkg-hero { padding: 120px 24px 60px; }
+  .pkg-main { padding: 60px 24px; }
+  .pkg-grid { grid-template-columns: 1fr; }
+  .whats-included { padding: 60px 24px; }
+  .included-grid { grid-template-columns: 1fr; }
+  .compare { padding: 60px 24px; overflow-x: auto; }
+  .pkg-faq { padding: 60px 24px; }
+  .pkg-faq-cols { grid-template-columns: 1fr; gap: 0; }
+  .pkg-cta-section { padding: 60px 24px; }
+  .form-row { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="mainNav">
+  <a class="nav-logo" onclick="showPage('home')"><em>Body</em> by Olesya</a>
+  <ul class="nav-links">
+    <li><a href="#about" onclick="showPage('home')">About</a></li>
+    <li><a href="#results" onclick="showPage('home')">Results</a></li>
+    <li><button onclick="showPage('packages')" id="pkgNavBtn">Packages &amp; Pricing</button></li>
+    <li><a href="#consult" onclick="showPage('home')">Contact</a></li>
+  </ul>
+  <button class="nav-cta" onclick="scrollToConsult()">Free Consultation</button>
+</nav>
+
+<!-- ══════════════ HOME PAGE ══════════════ -->
+<div id="home-page" class="page active">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-left">
+      <div class="hero-eyebrow">Kensington · Chelsea · Knightsbridge</div>
+      <h1>Feel strong,<br><em>confident</em><br>&amp; in control.</h1>
+      <p class="hero-sub">Bespoke personal training for women ready to see real results: fat loss, toning, and lasting strength, built around your body and your life.</p>
+      <div class="hero-actions">
+        <button class="btn-rose" onclick="scrollToConsult()">Book Free Consultation</button>
+        <button class="btn-outline" onclick="document.getElementById('results').scrollIntoView({behavior:'smooth'})">See Results</button>
+      </div>
+      <div class="hero-stats">
+        <div>
+          <div class="stat-num">20+</div>
+          <div class="stat-label">Years experience</div>
+        </div>
+        <div>
+          <div class="stat-num">500+</div>
+          <div class="stat-label">Transformations</div>
+        </div>
+        <div>
+          <div class="stat-num">5.0 ★</div>
+          <div class="stat-label">Google rating</div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-right">
+      <img src="group-photo.jpg.jpg" alt="Olesya with clients - Body by Olesya personal training London" style="width:100%;height:100%;object-fit:cover;display:block;">
+      <div class="hero-result-card">
+        <div class="result-card-label">Recent client result</div>
+        <div class="result-card-val">-12 kg</div>
+        <div class="result-card-sub">In 16 weeks. Body Transformation</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST BAR -->
+  <div class="trust-bar">
+    <div class="trust-item">KX Gym</div>
+    <div class="trust-item">Ultimate Performance Mayfair</div>
+    <div class="trust-item">Equinox</div>
+    <div class="trust-item">20 Years · London's Top Gyms</div>
+    <div class="trust-item">Google 5.0 ★ · 10 Reviews</div>
+  </div>
+
+  <!-- RESULTS -->
+  <section class="results-strip" id="results">
+    <div class="results-strip-header">
+      <div>
+        <div class="section-label">Real Client Results</div>
+        <h2 class="section-title">Women just like you,<br><em>transformed.</em></h2>
+      </div>
+      <button class="btn-primary" onclick="showPage('packages')">See Packages →</button>
+    </div>
+    <div class="results-grid">
+      <div class="result-pair">
+        <div class="result-img">
+          <img src="Result1.jpg.JPG" alt="Fat loss and glow up transformation" style="width:100%;height:100%;object-fit:cover;">
+        </div>
+        <div class="result-caption">Fat Loss &amp; Glow Up</div>
+      </div>
+      <div class="result-pair">
+        <div class="result-img">
+          <img src="Result2.jpg.JPG" alt="Fat loss and confidence transformation" style="width:100%;height:100%;object-fit:cover;">
+        </div>
+        <div class="result-caption">Fat Loss &amp; Newfound Confidence</div>
+      </div>
+      <div class="result-pair">
+        <div class="result-img">
+          <img src="Result4.jpg.JPG" alt="Post baby body transformation" style="width:100%;height:100%;object-fit:cover;">
+        </div>
+        <div class="result-caption">Post-Baby Body Reclaimed</div>
+      </div>
+      <div class="result-pair">
+        <div class="result-img">
+          <img src="rg.jpeg" alt="Fat loss and gym confidence transformation" style="width:100%;height:100%;object-fit:cover;">
+        </div>
+        <div class="result-caption">Fat Loss &amp; Gym Confidence</div>
+      </div>
+      <div class="result-pair">
+        <div class="result-img">
+          <img src="Result7.jpg.JPG" alt="50th birthday transformation" style="width:100%;height:100%;object-fit:cover;">
+        </div>
+        <div class="result-caption">Looking &amp; Feeling Incredible at 50</div>
+      </div>
+      <div class="result-pair">
+        <div class="result-img">
+          <img src="Result8.jpg.JPG" alt="Health journey transformation" style="width:100%;height:100%;object-fit:cover;">
+        </div>
+        <div class="result-caption">The Start of a Lifelong Health Journey</div>
+      </div>
+      <div class="result-pair" style="grid-column: 1 / -1; max-width: 50%;">
+        <div class="result-img">
+          <img src="Result11.jpg.JPG" alt="Total body transformation" style="width:100%;height:100%;object-fit:cover;">
+        </div>
+        <div class="result-caption">From Surviving to Thriving. A Total Transformation</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <div class="about-photo">
+      <img src="olesya-story.jpg" alt="Olesya - London's top female personal trainer" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;">
+      <div class="about-cred" style="top:24px;bottom:auto;">
+        <div class="about-cred-title">Trained &amp; worked at</div>
+        <div class="about-cred-items">
+          <span class="cred-pill">KX Gym</span>
+          <span class="cred-pill">UP Mayfair</span>
+          <span class="cred-pill">Equinox</span>
+          <span class="cred-pill">20+ Years</span>
+        </div>
+      </div>
+    </div>
+    <div class="about-content">
+      <div class="section-label">About Olesya</div>
+      <h2 class="section-title" style="margin-bottom:28px;">Training that <em>fits your life</em></h2>
+      <p>I'm Olesya, a personal trainer with over <strong>20 years of experience</strong> in London's most prestigious gyms, including KX Gym, Ultimate Performance Mayfair, and Equinox.</p>
+      <p>I've helped hundreds of women transform their bodies, and more importantly, how they feel every single day. I don't do cookie-cutter programmes. Every woman I work with gets a plan designed around <strong>her body, her schedule, and her goals.</strong></p>
+      <p>I work in Kensington &amp; Chelsea, so sessions fit into your world: my private gym, your home, or Hyde Park just around the corner. No gimmicks. No fads. Just smart, proven training and the support to make it last.</p>
+      <div class="about-actions">
+        <button class="btn-primary" onclick="scrollToConsult()">Start Your Transformation</button>
+        <button class="btn-outline" onclick="showPage('packages')">View Packages</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="services">
+    <div class="services-header">
+      <div class="section-label">What I Offer</div>
+      <h2 class="section-title">Results built <em>around you</em></h2>
+    </div>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-num">01</div>
+        <h3 class="service-title">Fat Loss &amp; Toning</h3>
+        <p class="service-desc">Targeted programmes that burn fat, build lean muscle, and sculpt your body sustainably. No crash diets, no burnout. Just smart training that delivers visible, lasting change.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-num">02</div>
+        <h3 class="service-title">Strength &amp; Body Composition</h3>
+        <p class="service-desc">Build real, functional strength that changes how you move and feel. Whether you're starting fresh or levelling up, every session is designed to count.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-num">03</div>
+        <h3 class="service-title">Menopause &amp; Hormonal Fitness</h3>
+        <p class="service-desc">Specialist training for women navigating perimenopause and menopause. Manage weight, reclaim energy, and feel confident at every stage of life.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-num">04</div>
+        <h3 class="service-title">Nutrition Coaching</h3>
+        <p class="service-desc">Results happen in the gym and in the kitchen. I'll build a flexible, sustainable nutrition plan around your lifestyle. No rabbit food, no misery.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-num">05</div>
+        <h3 class="service-title">Wedding &amp; Event Prep</h3>
+        <p class="service-desc">A specific date. A specific goal. I'll get you looking and feeling your absolute best for the moments that matter most.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-num">06</div>
+        <h3 class="service-title">Youth Fitness (Ages 8-18)</h3>
+        <p class="service-desc">Safe, fun, and age-appropriate training for young people. Build confidence, improve focus, and lay the foundation for a healthy life.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOCIAL PROOF -->
+  <section class="social-proof">
+    <div class="section-label">Client Testimonials</div>
+    <h2 class="section-title">What real clients say</h2>
+    <div class="reviews-row">
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"Training with Olesya has been life-changing. She helped me relearn certain movements that were affecting my body, and I've never felt better. My friends and family can see the difference."</p>
+        <div class="review-name"><strong>Natella Kanuk</strong>November 2024 · Google Review</div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"I've had so many trainers over the years, but Olesya is the best. You really underestimate what a good professional trainer can do for your body. Working with her has changed me so much."</p>
+        <div class="review-name"><strong>N.K.</strong>November 2024 · Google Review</div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"An amazing fitness coach that takes care of all my family. We are the fittest and healthiest we have ever been. She really knows her stuff and has a gift for working with people."</p>
+        <div class="review-name"><strong>Joanne Hamilton</strong>February 2023 · Google Review</div>
+      </div>
+    </div>
+    <div class="google-badge">
+      <div>
+        <div class="google-badge-rating">5.0</div>
+        <div class="google-badge-stars">★★★★★</div>
+      </div>
+      <div class="google-badge-text">Overall rating<br>Based on 10 Google Reviews</div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="how">
+    <div class="section-label">The Process</div>
+    <h2 class="section-title">How we get you <em>results</em></h2>
+    <div class="steps-row">
+      <div class="step-card">
+        <div class="step-circle">1</div>
+        <h3 class="step-title">Free Consultation</h3>
+        <p class="step-desc">We talk about your goals, your body, and what's worked (or hasn't) before. No pressure, no sales pitch. Just an honest conversation.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-circle">2</div>
+        <h3 class="step-title">Your Bespoke Plan</h3>
+        <p class="step-desc">I design a programme built entirely around you. Your body, your schedule, and your specific targets.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-circle">3</div>
+        <h3 class="step-title">We Train Together</h3>
+        <p class="step-desc">Sessions take place at my private, fully equipped gym in Kensington. Home training is available on request. Always focused, always personalised.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-circle">4</div>
+        <h3 class="step-title">You See Results</h3>
+        <p class="step-desc">Most clients notice real, visible changes within 4-6 weeks. We track your progress and adjust your programme as you improve.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BANNER -->
+  <div class="cta-banner">
+    <div class="cta-banner-text">
+      <h2 class="cta-banner-title">Ready to feel like <em>yourself</em> again?</h2>
+      <p class="cta-banner-sub">Book your free, no-obligation consultation. Let's figure out the best path forward. Together.</p>
+    </div>
+    <button class="btn-primary" onclick="scrollToConsult()">Book Free Consultation →</button>
+  </div>
+
+  <!-- CONSULT FORM -->
+  <section class="consult" id="consult">
+    <div class="consult-inner">
+      <div class="consult-left">
+        <div class="section-label">Get Started</div>
+        <h2 class="section-title">Let's talk about <em>your goals</em></h2>
+        <p>Fill in the form and I'll get back to you within 24 hours to arrange your free, no-obligation consultation. We'll talk about where you are now and what you want to achieve. No pressure, just an honest conversation.</p>
+        <div class="consult-promise">
+          <div class="promise-item">
+            <span class="promise-icon">✓</span>
+            <span class="promise-text">Free 30-minute consultation. No commitment required</span>
+          </div>
+          <div class="promise-item">
+            <span class="promise-icon">✓</span>
+            <span class="promise-text">Bespoke programme designed specifically for your body and goals</span>
+          </div>
+          <div class="promise-item">
+            <span class="promise-icon">✓</span>
+            <span class="promise-text">Sessions at my private gym in Kensington. Home training available on request</span>
+          </div>
+          <div class="promise-item">
+            <span class="promise-icon">✓</span>
+            <span class="promise-text">Your details are always kept completely private</span>
+          </div>
+        </div>
+      </div>
+      <div class="consult-form-box">
+        <h3 class="form-title">Book Your Free Consultation</h3>
+        <p class="form-sub">I'll get back to you within 24 hours.</p>
+        <form action="https://formspree.io/f/xaqlleyd" method="POST">
+          <div class="form-row">
+            <div class="form-group">
+              <label>First Name</label>
+              <input type="text" name="first_name" placeholder="Jane">
+            </div>
+            <div class="form-group">
+              <label>Last Name</label>
+              <input type="text" name="last_name" placeholder="Smith">
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Email Address</label>
+            <input type="email" name="email" placeholder="jane@example.com">
+          </div>
+          <div class="form-group">
+            <label>Phone Number</label>
+            <input type="tel" name="phone" placeholder="+44 7700 000000">
+          </div>
+          <div class="form-group">
+            <label>My main goal is</label>
+            <select name="goal">
+              <option value="">Select your goal…</option>
+              <option>Fat loss &amp; toning</option>
+              <option>Building strength &amp; muscle</option>
+              <option>Menopause support &amp; hormonal health</option>
+              <option>General fitness &amp; energy</option>
+              <option>Wedding or event preparation</option>
+              <option>Youth training (my child)</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Anything else? (optional)</label>
+            <textarea name="message" placeholder="Tell me a little about where you are now and what you'd love to achieve…"></textarea>
+          </div>
+          <button type="submit" class="form-submit">Send My Request →</button>
+          <p class="form-note">🔒 Your details are private and will never be shared.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq" id="faq">
+    <div class="faq-inner">
+      <div>
+        <div class="section-label">FAQ</div>
+        <h2 class="section-title">Questions you <em>might have</em></h2>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item open">
+          <button class="faq-btn">
+            <span class="faq-q">What results can I realistically expect?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-a">Real, lasting results. Not quick fixes. Whether you want fat loss, toning, or strength, we'll work towards goals that are personal to you. Most clients notice visible changes within 4-6 weeks, with significant transformations over 12-16 weeks.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-btn">
+            <span class="faq-q">I've never trained before - is that okay?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-a">Absolutely. Whether you're brand new to fitness or returning after a break, I'll guide you at your own pace. You'll feel supported and confident from your very first session.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-btn">
+            <span class="faq-q">Do you help with nutrition?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-a">Yes. Nutrition is a huge part of getting results. I'll build a flexible, sustainable plan around your lifestyle. Whether you need something long-term or a focused plan for an event like a wedding, we'll find what works for you.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-btn">
+            <span class="faq-q">Where do sessions take place?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-a">All sessions take place at my private, fully equipped gym in Kensington. Home training is available on request. Get in touch to discuss.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-btn">
+            <span class="faq-q">Do you specialise in menopause fitness?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-a">Yes. I understand the unique challenges of hormonal shifts, changes in body composition, and energy levels. My approach is specifically adapted to help women feel strong, confident, and in control at this stage of life.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-btn">
+            <span class="faq-q">How do I get started?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-a">Simply fill in the form above or email me at <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="dbb9b4bfa2b9a2b4b7bea8a2ba9bbcb6bab2b7f5b8b4b6">[email&#160;protected]</a>. I'll get back to you within 24 hours to arrange your free, no-obligation consultation. From there, we'll design a plan that fits your life and your goals.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER HOME -->
+  <footer>
+    <div class="footer-top">
+      <div>
+        <a class="footer-logo" onclick="showPage('home')"><em>Body</em> by Olesya</a>
+        <p class="footer-desc">Premier personal training for women in Kensington, Chelsea &amp; Knightsbridge. Over 20 years of experience delivering real, lasting transformations in London's most prestigious gyms.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <a>Fat Loss &amp; Toning</a>
+        <a>Strength Training</a>
+        <a>Menopause Fitness</a>
+        <a>Nutrition Coaching</a>
+        <a>Wedding Prep</a>
+      </div>
+      <div class="footer-col">
+        <h4>Navigate</h4>
+        <a onclick="showPage('home')">Home</a>
+        <a onclick="showPage('packages')">Packages &amp; Pricing</a>
+        <a onclick="showPage('home'); setTimeout(function(){document.getElementById('results').scrollIntoView({behavior:'smooth'})},100)">Before &amp; After</a>
+        <a onclick="scrollToConsult()">Book Consultation</a>
+      </div>
+      <div class="footer-col">
+        <h4>Get in Touch</h4>
+        <a href="/cdn-cgi/l/email-protection#25474a415c475c4a4940565c44654248444c490b464a48"><span class="__cf_email__" data-cfemail="c4a6aba0bda6bdaba8a1b7bda584a3a9a5ada8eaa7aba9">[email&#160;protected]</span></a>
+        <a>Kensington &amp; Chelsea</a>
+        <a>Near Hyde Park</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Body by Olesya · London's Top Female Personal Trainer. All rights reserved.</p>
+      <p><a href="#" style="color:rgba(255,255,255,0.2); text-decoration:none;">Privacy Policy</a></p>
+    </div>
+  </footer>
+
+</div><!-- /home page -->
+
+
+<!-- ══════════════ PACKAGES PAGE ══════════════ -->
+<div id="packages-page" class="page">
+
+  <!-- PKG HERO -->
+  <div class="pkg-hero">
+    <div class="section-label">Packages &amp; Pricing</div>
+    <h1 class="section-title" style="color:white; margin-bottom:16px;">Invest in your <em>transformation</em></h1>
+    <p class="pkg-hero-sub">Every package is fully bespoke. No two women are the same. And neither are their programmes. Choose the commitment level that fits your goals and your life.</p>
+  </div>
+
+  <!-- PKG CARDS -->
+  <section class="pkg-main">
+    <div class="section-label">Choose Your Package</div>
+    <h2 class="section-title">Three levels of <em>commitment</em></h2>
+    <div class="pkg-grid">
+
+      <!-- Package 1: Body Transformation -->
+      <div class="pkg-card">
+        <div class="pkg-card-img">
+          <img src="Transformation.jpg" alt="Body transformation result" style="width:100%;height:100%;object-fit:cover;object-position:center 40%;display:block;">
+        </div>
+        <div class="pkg-body">
+          <h3 class="pkg-name">Body Transformation</h3>
+          <p class="pkg-tagline">For women serious about dramatic change</p>
+          <p class="pkg-desc">The most intensive programme targeting fat loss, muscle gain, and a complete physique overhaul. Life-changing results for women who are fully committed.</p>
+          <div class="pkg-details">
+            <span class="pkg-detail-pill">16 Weeks</span>
+            <span class="pkg-detail-pill">4x per week</span>
+            <span class="pkg-detail-pill">Private Gym, Kensington</span>
+          </div>
+          <div class="pkg-price-row">
+            <span class="pkg-price">£4,800</span>
+            <span class="pkg-price-sub">full programme</span>
+          </div>
+          <ul class="pkg-features">
+            <li>16-week fully bespoke training programme</li>
+            <li>4 sessions per week with Olesya</li>
+            <li>Full nutrition plan &amp; weekly check-ins</li>
+            <li>Body composition tracking throughout</li>
+            <li>Lifestyle &amp; mindset coaching</li>
+            <li>WhatsApp support between sessions</li>
+            <li>Before &amp; after progress photos</li>
+          </ul>
+          <div class="pkg-cta">
+            <button class="btn-primary" style="width:100%;" onclick="scrollToConsult()">Book Free Consultation</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Package 2: Bridal Prep -->
+      <div class="pkg-card">
+        <div class="pkg-card-img">
+          <img src="bridal-prep.JPG" alt="Bridal prep transformation" style="width:100%;height:100%;object-fit:cover;object-position:center 40%;display:block;">
+        </div>
+        <div class="pkg-body">
+          <h3 class="pkg-name">Bridal Prep</h3>
+          <p class="pkg-tagline">Look and feel incredible on your wedding day</p>
+          <p class="pkg-desc">Tailored for brides-to-be who want to look and feel their absolute best. Focused on toning, stress reduction, posture, and energy so you radiate confidence on the day that matters most.</p>
+          <div class="pkg-details">
+            <span class="pkg-detail-pill">16 Weeks</span>
+            <span class="pkg-detail-pill">3x per week</span>
+            <span class="pkg-detail-pill">Private Gym, Kensington</span>
+          </div>
+          <div class="pkg-price-row">
+            <span class="pkg-price">£3,600</span>
+            <span class="pkg-price-sub">full programme</span>
+          </div>
+          <ul class="pkg-features">
+            <li>16-week personalised training programme</li>
+            <li>3 sessions per week with Olesya</li>
+            <li>Wedding-specific nutrition guidance</li>
+            <li>Stress management &amp; energy coaching</li>
+            <li>Posture &amp; confidence work</li>
+            <li>WhatsApp support throughout</li>
+            <li>Progress photos at key milestones</li>
+          </ul>
+          <div class="pkg-cta">
+            <button class="btn-primary" style="width:100%;" onclick="scrollToConsult()">Book Free Consultation</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Package 3: Wellness & Lifestyle - MOST POPULAR -->
+      <div class="pkg-card featured">
+        <div class="pkg-featured-tag">Most Popular</div>
+        <div class="pkg-card-img">
+          <img src="Wellness .JPG" alt="Wellness and lifestyle transformation" style="width:100%;height:100%;object-fit:cover;object-position:center 30%;display:block;">
+        </div>
+        <div class="pkg-body">
+          <h3 class="pkg-name">Wellness &amp; Lifestyle</h3>
+          <p class="pkg-tagline">For lasting, sustainable change</p>
+          <p class="pkg-desc">A holistic 6-month programme covering strength training, nutrition, mobility, and mental wellness. Ideal for women who want long-term lifestyle change, not just short-term results.</p>
+          <div class="pkg-details">
+            <span class="pkg-detail-pill">6 Months</span>
+            <span class="pkg-detail-pill">3x per week</span>
+            <span class="pkg-detail-pill">Private Gym, Kensington</span>
+          </div>
+          <div class="pkg-price-row">
+            <span class="pkg-price">£5,500</span>
+            <span class="pkg-price-sub">full programme</span>
+          </div>
+          <ul class="pkg-features">
+            <li>6-month fully personalised programme</li>
+            <li>3 sessions per week with Olesya</li>
+            <li>Comprehensive nutrition &amp; lifestyle plan</li>
+            <li>Mobility, strength &amp; mental wellness focus</li>
+            <li>Monthly progress reviews &amp; plan adjustments</li>
+            <li>Priority WhatsApp support</li>
+            <li>Menopause-specific adaptations if needed</li>
+          </ul>
+          <div class="pkg-cta">
+            <button class="btn-primary" style="width:100%; background:var(--rose);" onclick="scrollToConsult()">Book Free Consultation</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Package 4: Bespoke -->
+      <div class="pkg-card">
+        <div class="pkg-card-img" style="background:var(--charcoal); display:flex; align-items:center; justify-content:center; min-height:200px;">
+          <p style="color:rgba(255,255,255,0.6); font-family:'Playfair Display',serif; font-size:1.8rem; font-style:italic; text-align:center; padding:24px;">Built entirely<br>around you.</p>
+        </div>
+        <div class="pkg-body">
+          <h3 class="pkg-name">Bespoke Package</h3>
+          <p class="pkg-tagline">A custom programme built around your life</p>
+          <p class="pkg-desc">Your schedule, your goals, your pace. I will design a completely bespoke programme tailored entirely around your availability and what you want to achieve.</p>
+          <div class="pkg-details">
+            <span class="pkg-detail-pill">Fully Custom</span>
+            <span class="pkg-detail-pill">Private Gym, Kensington</span>
+          </div>
+          <div class="pkg-price-row">
+            <span class="pkg-price" style="font-size:1.4rem;">Contact for pricing</span>
+          </div>
+          <ul class="pkg-features">
+            <li>Fully bespoke programme built around you</li>
+            <li>Flexible schedule to suit your lifestyle</li>
+            <li>Same expert coaching and standards</li>
+            <li>Nutrition guidance included</li>
+            <li>WhatsApp support throughout</li>
+          </ul>
+          <div class="pkg-cta">
+            <button class="btn-primary" style="width:100%;" onclick="scrollToConsult()">Get in Touch</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Package 5: Online Premium -->
+      <div class="pkg-card">
+        <div class="pkg-card-img">
+          <img src="olesya-story.jpg" alt="Online coaching with Olesya" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;">
+        </div>
+        <div class="pkg-body">
+          <h3 class="pkg-name">Online Coaching. Premium</h3>
+          <p class="pkg-tagline">The full experience. From anywhere in the world.</p>
+          <p class="pkg-desc">My most comprehensive online option. I design your full programme, guide you through every step, and we stay in close contact throughout. Daily check-ins, nutrition guidance, form feedback, and constant support.</p>
+          <div class="pkg-details">
+            <span class="pkg-detail-pill">Monthly</span>
+            <span class="pkg-detail-pill">Online</span>
+            <span class="pkg-detail-pill">Worldwide</span>
+          </div>
+          <div class="pkg-price-row">
+            <span class="pkg-price">£299</span>
+            <span class="pkg-price-sub">per month</span>
+          </div>
+          <ul class="pkg-features">
+            <li>Fully bespoke online training programme</li>
+            <li>Daily check-ins and close support</li>
+            <li>Full nutrition plan and guidance</li>
+            <li>Form feedback on video submissions</li>
+            <li>WhatsApp access throughout</li>
+            <li>Weekly programme adjustments</li>
+            <li>Suitable for all levels</li>
+          </ul>
+          <div class="pkg-cta">
+            <button class="btn-primary" style="width:100%;" onclick="scrollToConsult()">Book Free Consultation</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Package 6: Online Independent -->
+      <div class="pkg-card">
+        <div class="pkg-card-img">
+          <img src="olesya-story.jpg" alt="Online coaching independent" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;">
+        </div>
+        <div class="pkg-body">
+          <h3 class="pkg-name">Online Coaching. Independent</h3>
+          <p class="pkg-tagline">Expert programming for experienced gym-goers.</p>
+          <p class="pkg-desc">For women who already know their way around a gym and want expert programming with accountability. You bring the discipline. I bring the expertise. Not suitable for beginners.</p>
+          <div class="pkg-details">
+            <span class="pkg-detail-pill">Monthly</span>
+            <span class="pkg-detail-pill">Online</span>
+            <span class="pkg-detail-pill">Worldwide</span>
+          </div>
+          <div class="pkg-price-row">
+            <span class="pkg-price">£185</span>
+            <span class="pkg-price-sub">per month</span>
+          </div>
+          <ul class="pkg-features">
+            <li>Bespoke online training programme</li>
+            <li>Regular check-ins and progress reviews</li>
+            <li>Nutrition guidance included</li>
+            <li>WhatsApp support between check-ins</li>
+            <li>Programme adjustments as you progress</li>
+            <li>For experienced gym-goers only</li>
+          </ul>
+          <div class="pkg-cta">
+            <button class="btn-primary" style="width:100%;" onclick="scrollToConsult()">Book Free Consultation</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- WHAT'S INCLUDED -->
+  <section class="whats-included">
+    <div class="section-label">Every Package Includes</div>
+    <h2 class="section-title">What you <em>always get</em></h2>
+    <div class="included-grid">
+      <div class="included-item">
+        <span class="included-icon">🎯</span>
+        <div>
+          <div class="included-title">Fully Bespoke Programme</div>
+          <div class="included-desc">No generic plans. Every programme is designed specifically around your body, your goals, and your lifestyle. It evolves as you do.</div>
+        </div>
+      </div>
+      <div class="included-item">
+        <span class="included-icon">🥗</span>
+        <div>
+          <div class="included-title">Nutrition Guidance</div>
+          <div class="included-desc">Practical, flexible nutrition advice that fits your life. Not a rigid diet plan you'll abandon by week two.</div>
+        </div>
+      </div>
+      <div class="included-item">
+        <span class="included-icon">📱</span>
+        <div>
+          <div class="included-title">WhatsApp Support</div>
+          <div class="included-desc">I'm with you between sessions. Questions, motivation, accountability. I'm always just a message away.</div>
+        </div>
+      </div>
+      <div class="included-item">
+        <span class="included-icon">📊</span>
+        <div>
+          <div class="included-title">Progress Tracking</div>
+          <div class="included-desc">Regular body composition assessments and progress photos so you can see exactly how far you've come.</div>
+        </div>
+      </div>
+      <div class="included-item">
+        <span class="included-icon">📍</span>
+        <div>
+          <div class="included-title">Private Gym, Kensington</div>
+          <div class="included-desc">Sessions take place at my private, fully equipped gym in Kensington. Home training available on request.</div>
+        </div>
+      </div>
+      <div class="included-item">
+        <span class="included-icon">🔄</span>
+        <div>
+          <div class="included-title">Ongoing Adjustment</div>
+          <div class="included-desc">Your programme adapts as you progress. As you get stronger and fitter, we raise the bar. Always keeping you challenged and moving forward.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMPARE TABLE -->
+  <section class="compare">
+    <div class="section-label">Compare</div>
+    <h2 class="section-title">Side-by-side <em>comparison</em></h2>
+    <table class="compare-table">
+      <thead>
+        <tr>
+          <th>Feature</th>
+          <th>Body Transformation<br><small>£4,800</small></th>
+          <th class="featured-col">Bridal Prep<br><small>£3,600</small></th>
+          <th>Wellness &amp; Lifestyle<br><small>£5,500</small></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Duration</td><td>16 weeks</td><td class="featured-col">16 weeks</td><td>6 months</td></tr>
+        <tr><td>Sessions per week</td><td>4×</td><td class="featured-col">3×</td><td>3×</td></tr>
+        <tr><td>Nutrition plan</td><td><span class="check">✓</span></td><td class="featured-col"><span class="check">✓</span></td><td><span class="check">✓</span></td></tr>
+        <tr><td>WhatsApp support</td><td><span class="check">✓</span></td><td class="featured-col"><span class="check">✓</span></td><td>Priority ✓</td></tr>
+        <tr><td>Progress tracking &amp; photos</td><td><span class="check">✓</span></td><td class="featured-col"><span class="check">✓</span></td><td><span class="check">✓</span></td></tr>
+        <tr><td>Monthly plan reviews</td><td><span class="cross">–</span></td><td class="featured-col"><span class="cross">–</span></td><td><span class="check">✓</span></td></tr>
+        <tr><td>Menopause adaptations</td><td><span class="check">✓</span></td><td class="featured-col"><span class="check">✓</span></td><td><span class="check">✓</span></td></tr>
+        <tr><td>Wedding / event focus</td><td><span class="cross">–</span></td><td class="featured-col"><span class="check">✓</span></td><td><span class="cross">–</span></td></tr>
+        <tr><td>Lifestyle &amp; mindset coaching</td><td><span class="check">✓</span></td><td class="featured-col"><span class="cross">–</span></td><td><span class="check">✓</span></td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- PKG FAQ -->
+  <section class="pkg-faq">
+    <div class="section-label">Frequently Asked</div>
+    <h2 class="section-title">Package <em>questions</em></h2>
+    <div class="pkg-faq-cols">
+      <div>
+        <div class="faq-item open">
+          <button class="faq-btn">
+            <span class="faq-q">Is this right for me?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-a">My programmes are designed for women who are truly ready to commit. Not just to training, but to the process. If you're ready to put in the work, show up consistently, and trust the process, I'll be with you every step of the way.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-btn">
+            <span class="faq-q">What mindset do I need to succeed?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-a">Results don't come from motivation alone. They come from discipline, consistency, and showing up even when you don't feel like it. I'll push you, support you, and hold you accountable. But the commitment has to come from you.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-btn">
+            <span class="faq-q">How do I know I'm ready?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-a">If you're tired of starting over, tired of making excuses, and genuinely ready to invest in yourself, you're ready. My clients don't just change their bodies. They change how they think, how they carry themselves, and how they live.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-btn">
+            <span class="faq-q">Which package is right for me?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-a">The best way to find out is through the free consultation. I'll ask you about your goals, timeline, and lifestyle, and recommend the right option for you. There's no pressure to commit on the call.</div>
+        </div>
+      </div>
+      <div>
+        <div class="faq-item">
+          <button class="faq-btn">
+            <span class="faq-q">What is your cancellation policy?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-a">I ask for a minimum of 24 hours notice for any cancellations or rescheduling. Late cancellations may be charged in full. Commitment and consistency are the foundation of real results.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-btn">
+            <span class="faq-q">Where do sessions take place?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-a">All sessions take place at my private, fully equipped gym in Kensington. Home training is available on request. Get in touch to discuss.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-btn">
+            <span class="faq-q">Is there a package for beginners?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-a">Every in-person package is suitable for all fitness levels, including complete beginners. I adapt the programme to exactly where you are right now. Please note the Online Independent package is for experienced gym-goers only.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-btn">
+            <span class="faq-q">Do you offer online coaching?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-a">Yes! I offer two online coaching options starting from £185 per month. You get the same expert programming and accountability, from wherever you are in the world.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PKG CTA -->
+  <section class="pkg-cta-section">
+    <div class="section-label" style="color:white; justify-content:center;">Start Today</div>
+    <h2 class="section-title" style="color:white; margin-bottom:16px;">Not sure which package<br>is right for <em>you?</em></h2>
+    <p>Book your free, no-obligation consultation. We will talk through your goals and I will recommend the best option. No pressure, no hard sell.</p>
+    <div class="pkg-cta-btns">
+      <button class="btn-primary" onclick="scrollToConsult()">Book Free Consultation</button>
+      <a href="/cdn-cgi/l/email-protection#dbb9b4bfa2b9a2b4b7bea8a2ba9bbcb6bab2b7f5b8b4b6" class="btn-outline" style="border-color:white; color:white;">Email Olesya Directly</a>
+    </div>
+  </section>
+
+  <!-- PACKAGES FOOTER -->
+  <footer>
+    <div class="footer-top">
+      <div>
+        <a class="footer-logo" onclick="showPage('home')"><em>Body</em> by Olesya</a>
+        <p class="footer-desc">Premier personal training for women in Kensington, Chelsea &amp; Knightsbridge. Over 20 years of experience delivering real, lasting transformations.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Packages</h4>
+        <a>Body Transformation. £4,800</a>
+        <a>Bridal Prep. £3,600</a>
+        <a>Wellness &amp; Lifestyle. £5,500</a>
+        <a>Online Coaching. From £185/month</a>
+        <a>Bespoke Package. Contact for pricing</a>
+      </div>
+      <div class="footer-col">
+        <h4>Navigate</h4>
+        <a onclick="showPage('home')">Home</a>
+        <a onclick="showPage('home'); setTimeout(function(){document.getElementById('results').scrollIntoView({behavior:'smooth'})},100)">Before &amp; After</a>
+        <a onclick="scrollToConsult()">Book Consultation</a>
+      </div>
+      <div class="footer-col">
+        <h4>Get in Touch</h4>
+        <a href="/cdn-cgi/l/email-protection#4d2f2229342f342221283e342c0d2a202c2421632e2220"><span class="__cf_email__" data-cfemail="660409021f041f090a03151f0726010b070f0a4805090b">[email&#160;protected]</span></a>
+        <a>Kensington &amp; Chelsea</a>
+        <a>Private Gym, Kensington</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Body by Olesya. All rights reserved.</p>
+      <p><a href="#" style="color:rgba(255,255,255,0.2); text-decoration:none;">Privacy Policy</a></p>
+    </div>
+  </footer>
+
+</div><!-- /packages page -->
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+function showPage(page) {
+  var homePage = document.getElementById('home-page');
+  var pkgPage = document.getElementById('packages-page');
+  var pkgBtn = document.getElementById('pkgNavBtn');
+  if (page === 'home') {
+    homePage.classList.add('active');
+    pkgPage.classList.remove('active');
+    if (pkgBtn) pkgBtn.classList.remove('active-nav');
+  } else {
+    homePage.classList.remove('active');
+    pkgPage.classList.add('active');
+    if (pkgBtn) pkgBtn.classList.add('active-nav');
+  }
+  window.scrollTo(0, 0);
+}
+
+function scrollToConsult() {
+  showPage('home');
+  setTimeout(function() {
+    var el = document.getElementById('consult');
+    if (el) el.scrollIntoView({ behavior: 'smooth' });
+  }, 300);
+}
+
+// Nav scroll effect
+window.addEventListener('scroll', function() {
+  var nav = document.getElementById('mainNav');
+  if (nav) nav.classList.toggle('scrolled', window.scrollY > 40);
+});
+// FAQ accordion
+document.addEventListener('click', function(e) {
+  var btn = e.target.closest('.faq-btn');
+  if (!btn) return;
+  var item = btn.closest('.faq-item');
+  var isOpen = item.classList.contains('open');
+  var container = item.closest('.faq-list, .faq-inner, .pkg-faq-cols');
+  if (container) {
+    container.querySelectorAll('.faq-item').forEach(function(i) {
+      if (i !== item) i.classList.remove('open');
+    });
+  }
+  if (!isOpen) {
+    item.classList.add('open');
+  } else {
+    item.classList.remove('open');
+  }
+});
+</script>
+</body>
+</html>
