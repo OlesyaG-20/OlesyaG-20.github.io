@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Body by Olesya | Coming Back Better</title>
+<meta name="robots" content="noindex">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --cream: #F9F6F1;
+  --rose: #B87355;
+  --rose-dark: #9A5E42;
+  --charcoal: #1E1E1C;
+  --blush: #DBBFA8;
+  --mid: #6A6560;
+}
+html, body {
+  height: 100%;
+  font-family: 'Jost', sans-serif;
+  background: var(--cream);
+  color: var(--charcoal);
+}
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 40px 24px;
+  text-align: center;
+}
+
+.logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  color: var(--charcoal);
+  margin-bottom: 60px;
+}
+.logo em { font-style: italic; color: var(--rose); }
+
+.line { width: 40px; height: 1px; background: var(--rose); margin: 0 auto 24px; }
+
+.label {
+  font-size: 0.68rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--rose);
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.2rem, 6vw, 3.8rem);
+  font-weight: 400;
+  line-height: 1.15;
+  color: var(--charcoal);
+  margin-bottom: 24px;
+}
+h1 em { font-style: italic; color: var(--rose); }
+
+.subtitle {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--mid);
+  font-weight: 300;
+  max-width: 420px;
+  margin: 0 auto 48px;
+}
+
+.divider {
+  width: 60px; height: 1px;
+  background: var(--blush);
+  margin: 0 auto 48px;
+}
+
+.contact-label {
+  font-size: 0.68rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--mid);
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.contact-email {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1rem;
+  color: var(--rose);
+  text-decoration: none;
+  font-style: italic;
+}
+.contact-email:hover { color: var(--rose-dark); }
+
+.tagline {
+  margin-top: 60px;
+  font-size: 0.72rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--blush);
+  font-weight: 500;
+}
+
+/* Animated dots */
+.dots::after {
+  content: '';
+  animation: dots 2s infinite;
+}
+@keyframes dots {
+  0%   { content: ''; }
+  33%  { content: '.'; }
+  66%  { content: '..'; }
+  100% { content: '...'; }
+}
+</style>
+</head>
+<body>
+
+  <div class="logo"><em>Body</em> by Olesya</div>
+
+  <div class="line"></div>
+  <div class="label">We'll be right back</div>
+
+  <h1>Upgrading to<br><em>something better.</em></h1>
+
+  <p class="subtitle">
+    We're currently making improvements to give you the best possible experience. Back very soon — better than ever.
+  </p>
+
+  <div class="divider"></div>
+
+  <div class="contact-label">In the meantime, get in touch</div>
+  <a class="contact-email" href="mailto:bodybyolesya@gmail.com">bodybyolesya@gmail.com</a>
+
+  <div class="tagline">Kensington · Chelsea · Knightsbridge<span class="dots"></span></div>
+
+</body>
+</html>
